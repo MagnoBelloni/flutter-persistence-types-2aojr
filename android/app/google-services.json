@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "120301688867",
+    "project_id": "aojr-database-magno",
+    "storage_bucket": "aojr-database-magno.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120301688867:android:8be555c2cd82a24006b996",
+        "android_client_info": {
+          "package_name": "com.example.persistence_types"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120301688867-r1acqamn0hpsu3pb71hlsqh447pb3ps1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpPnmaVValtpUFFvAhdUUv9VH5IYDQKkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120301688867-r1acqamn0hpsu3pb71hlsqh447pb3ps1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
