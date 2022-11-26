@@ -65,8 +65,8 @@ class _ListCarWidgetState extends State<ListCarWidget> {
         child: ListTile(
           title: Text(c.name),
           subtitle: Text(c.model),
-          onLongPress: () {
-            //delete
+          onLongPress: () async {
+            await data.reference.delete();
           },
         ),
       ),

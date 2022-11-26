@@ -1,5 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:persistence_types/components/input_form.dart';
+import 'package:persistence_types/firebase/models/car.dart';
 import 'package:persistence_types/utils/customStyles.dart';
 import 'package:persistence_types/utils/customWidgets.dart';
 
@@ -15,6 +17,10 @@ class _AddCarWidgetState extends State<AddCarWidget> {
   final _formKey = GlobalKey<FormState>();
   final _nameController = TextEditingController();
   final _modelController = TextEditingController();
+
+  _insertCar(Car car) async {
+    await FirebaseFirestore.instance.collection("cars").add(car.toJson());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +48,8 @@ class _AddCarWidgetState extends State<AddCarWidget> {
                           child: ElevatedButton(
                               onPressed: (() {
                                 if (_formKey.currentState!.validate()) {
+                                  final car = Car(_nameController.text, _modelController.text);
+                                  _insertCar(car);
                                   Navigator.pop(context);
                                 }
                               }),
